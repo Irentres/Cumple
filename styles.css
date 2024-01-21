@@ -1,0 +1,230 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-repeat: no-repeat;
+    background-image: url('fondo2.jpg');
+    background-size: cover;
+}
+
+
+@media only screen and (max-width: 600px) {
+	body {
+	  background-image: url(fondo2.jpg);
+	  background-size: cover;
+	}
+  }
+
+.background {
+	display: flex;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.6;
+	margin: 0;
+	padding: 0;
+}
+
+.contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.elemento-derecha {
+	font-family: 'Indie Flower', cursive;
+	margin: 0px;
+	padding: 0px;
+}
+
+::selection {
+	background: transparent;
+}
+
+h4 {
+	font-size: 26px;
+	line-height: 1px;
+	font-family: 'Amatic SC', cursive;
+}
+
+.color1 {
+	color: #1e8351
+}
+
+.color2 {
+	color: #7da756
+}
+
+.elemento-izquierda {
+	width: 45%;
+	padding: 10px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 850px;
+	flex: 1;
+}
+
+.elemento-izquierda {
+	color: #333;
+	font-family: 'Playfair Display';
+}
+
+.elemento-derecha {
+	width: 45%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 850px;
+}
+
+.elemento-derecha .card-container {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.elemento-derecha {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+.elemento-derecha .card {
+	color: #333;
+	width: 300px;
+	height: 400px;
+	background: #e0e1dc;
+	transform-style: preserve-3d;
+	transform: perspective(2000px);
+	box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+	transition: 2s;
+}
+
+.elemento-derecha .card:hover {
+	transform: translate(-20%, -10%) perspective(2000px) rotate(5deg) scale(1.2);
+	box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.elemento-derecha .card:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: #BAC1BA;
+	transform-origin: bottom;
+	transform: skewX(-45deg);
+}
+
+.elemento-derecha .card:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -5px;
+	width: 5px;
+	height: 100%;
+	background: #92A29C;
+	transform-origin: left;
+	transform: skewY(-45deg);
+}
+
+.elemento-derecha .card .imgBox {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-origin: left;
+	transition: .7s;
+}
+
+.elemento-derecha .card .bark {
+	position: absolute;
+	background: #e0e1dc;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .7s;
+}
+
+.elemento-derecha .card .imgBox img {
+	min-width: 250px;
+	max-height: 400px;
+}
+
+.elemento-derecha .card:hover .imgBox {
+	transform: rotateY(-135deg);
+}
+
+.elemento-derecha .card:hover .bark {
+	opacity: 1;
+	transition: .6s;
+	box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+
+.elemento-derecha .card .details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 0 0 10px;
+	z-index: -1;
+	margin-top: 70px;
+}
+
+.elemento-derecha .card .details p {
+	font-size: 15px;
+	line-height: 5px;
+	padding: 0 0 0 20px;
+}
+
+.elemento-derecha .card .details h4 {
+	text-align: center;
+}
+
+.elemento-derecha .text-right {
+	text-align: right;
+}
+
+footer {
+	text-align: center;
+	color: #333;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.elemento-izquierda .button {
+	padding: 17px 40px;
+	border-radius: 50px;
+	cursor: pointer;
+	border: 0;
+	background-color: white;
+	box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-size: 15px;
+	transition: all 0.5s ease;
+}
+
+.elemento-izquierda button:hover {
+	letter-spacing: 3px;
+	background-color: hsl(96, 66%, 71%);
+	color: hsl(0, 0%, 0%);
+	box-shadow: rgb(108, 161, 22) 0px 7px 29px 0px;
+}
+
+.elemento-izquierda button:active {
+	letter-spacing: 3px;
+	background-color: hsl(96, 66%, 71%);
+	color: hsl(0, 0%, 1%);
+	box-shadow: rgb(108, 161, 22) 0px 7px 29px 0px;
+	transform: translateY(10px);
+	transition: 100ms;
+}

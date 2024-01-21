@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Cumple Bules</title>
+</head>
+
+
+<style>
+    #confeti-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    .confeti {
+        position: absolute;
+        background-color: #91cc44;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transform-origin: 50% 50%;
+        opacity: 0.8;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) rotateZ(0);
+        }
+
+        100% {
+            transform: translateY(100vh) rotateZ(360deg);
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div id="confeti-container"></div>
+
+    <script>
+        function crearConfeti() {
+            const confetiContainer = document.getElementById('confeti-container');
+
+            for (let i = 0; i < 100; i++) {
+                const confeti = document.createElement('div');
+                confeti.className = 'confeti';
+                confeti.style.left = `${Math.random() * 100}vw`;
+                confeti.style.animationDuration = `${Math.random() * 2 + 1}s`;
+                confeti.style.animationDelay = `${Math.random()}s`;
+
+                confetiContainer.appendChild(confeti);
+            }
+        }
+    </script>
+
+    <body>
+        <div class="contenedor">
+            <div class="elemento-izquierda">
+                <main>
+                    <div class="card">
+
+                        <section>
+                            <h1>¡Querido Bules!,</h1>
+                            <h2>En este día especial, quería dedicarte unas palabras...</h2>
+                            <h2>Pero escribirlas en papel era demasiado fácil,</h2>
+                            <h2>así que creé una web para ti (sí, otra).</h2>
+                        </section>
+
+                        <button class="button" onclick="crearConfeti()">¡Felicidades!</button>
+
+
+                </main>
+            </div>
+            <div class="elemento-derecha">
+                <div class="card">
+                    <div class="imgBox">
+                        <div class="bark"></div>
+                        <img src="carta2.jpg">
+                    </div>
+                    <div class="details">
+                        <h4 class="color1">Te haces mayor!</h2>
+                            <h4 class="color2 margin">FELIZ CUMPLE</h3>
+                                <p>Hay poco que no sepas de mi, pues</p>
+                                <p>me has acompañado en cada paso</p>
+                                <p>de estos ocho años de risas, cotilleos,</p>
+                                <p>dudas existenciales, amores que no han</p>
+                                <p>salido bien, y una larga lista de etc.</p>
+                                <p>Pero siempre has estado para mi, igual</p>
+                                <p>que yo he estado para ti, así espero</p>
+                                <p>que nos queden muchos años más para</p>
+                                <p>compartir como hasta ahora.</p>
+                                <p class="text-right"><strong>Te quiero mucho</strong></p>
+                                <!--Por si me copias el codigo, que sepas que me ha costado mucho!!!-->
+                                <p class="text-right">♥ de Irene</p>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+            <!-- img src="fondo2.jpg" -->
+            </div>
+        </div>
+        <footer>
+            <p>© 2024 Irene</p>
+        </footer>
+        </script>
+    </body>
+
+</html>
